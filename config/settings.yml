@@ -1,3 +1,6 @@
+links:
+  gravatar: "https://secure.gravatar.com/avatar/" 
+
 validations:
   name:
     max_length: 50

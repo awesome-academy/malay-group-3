@@ -32,4 +32,19 @@
 en:
   hello: "Hello world"
 
-title: "Course Registration"
+  title: "Course Registration"
+
+  layouts:
+    footer:
+      contact_foot: "Contact"
+
+  users:
+    user_not_found: "User not found"
+    new:
+      confirmation: "Password Confirmation"
+      signup_create: "Create my account"
+      signup_title: "Sign up"
+      heading: "Sign up"
+    create:
+      fail_mess_create: "Account create fail."
+      success_mess_create: "Welcome to the Sample App!"
