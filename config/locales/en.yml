@@ -47,7 +47,19 @@ en:
       heading: "Sign up"
     create:
       fail_mess_create: "Account create fail."
-      success_mess_create: "Welcome to the Sample App!"
+      success_mess_create: "Welcome to the Course Registration App!"
+    update:
+      edit: "edit user"
+      confirm: "Confirmation"
+      gravatar: "update picture!"
+      update: "update my account!"
+      success: "updated successfuly"
+      fail: "update failed! please try again"
+      login: "Please log in"
+      delete: "account deleted!"
+      delete_fail: "WARNING! failed to delete"
+      delete_confirm: "are you sure?"
+
 
   sessions:
     create:
