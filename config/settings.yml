@@ -1,5 +1,6 @@
 links:
-  gravatar: "https://secure.gravatar.com/avatar/" 
+  gravatar: "https://secure.gravatar.com/avatar/"
+  gravatar_email: "http://gravatar.com/emails"
 
 validations:
   name:
