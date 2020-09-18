@@ -48,3 +48,7 @@ en:
     create:
       fail_mess_create: "Account create fail."
       success_mess_create: "Welcome to the Sample App!"
+
+  sessions:
+    create:
+      Invalid_email : "invalid email/password"
