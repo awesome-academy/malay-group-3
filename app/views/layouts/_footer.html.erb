@@ -1,7 +1,12 @@
 <footer class="footer">
+  <small>
+    <%= t ".description_1" %>
+  </small>
+
   <nav>
     <ul>
-      <li><%= link_to t(".contact_foot"), contact_path %></li>
+    <%= t ".info_foot" %>
+    <%= link_to t("further_info_message"), info_path %>
     </ul>
   </nav>
 </footer>

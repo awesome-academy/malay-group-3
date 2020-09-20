@@ -1,45 +1,58 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
 
-  title: "Course Registration"
-
   layouts:
+    application:
+      title: "Course Registration University Unknown"
+    header:
+      logo: "Course Registration"
+      help_head: "Help"
+      home_head: "Home"
+      login_head: "Log In"
+      logout_head: "Log Out"
+      users_head: "Users"
+      account: "Account"
+      profile_head: "Profile"
+      setting_head: "Settings"
     footer:
-      contact_foot: "Contact"
+      description_1: "Copyright ©2020 University Unknown- All Right Reserved"
+      info_foot: "For further information, please click "
 
+  further_info_message: "here"
+
+  static_pages:
+    home:
+      description_1: "Welcome to the Course Registration System."
+      description_2: "Please log in with your student email account."
+      heading: "Course Registration System"
+      home_title: "Home"
+      signup_button: "Sign Up now"
+    help:
+      help_title: "Help"
+      heading: "Help"
+      description_1: "Any problems or suggestion, please contact us at "
+      email: "Email: universityhelp@unknown.my"
+      contact: "Phone: 0129876543"
+      faq: "Frequently Asked Question"
+    info:
+      info_title: "Information"
+      heading: "Information"
+      manual_form_description: "Manual Registration Form."
+      manual_description: "1. If you wish to make manual registration, please download this "
+      manual_description2: "You are required to print out the form and pass to HEP office after fill in all information."
+      schedule: "2. Class Schedule"
+      description_3: "3. Course List"
+      
   users:
     user_not_found: "User not found"
+    edit:
+      edit_title: "Edit user"
+      update: "Update my account!"
+      heading: "Update ypur profile"
+      gravatar: "Update picture!"
+    index:
+      index_title: "All Users"
+      heading: "All users"
     new:
       confirmation: "Password Confirmation"
       signup_create: "Create my account"
@@ -47,20 +60,38 @@ en:
       heading: "Sign up"
     create:
       fail_mess_create: "Account create fail."
-      success_mess_create: "Welcome to the Course Registration App!"
+      info_mail: "Please check your email to activate your account."
+      success_mess_create: "Welcome to the Course Registration System!"
+    user:
+      confirm: "Are you sure?"
+      delete_link: "Account Deleted!"
+    destroy:
+      fail: "Deleted User failed"
+      success: "User Deleted"
     update:
-      edit: "edit user"
-      confirm: "Confirmation"
-      gravatar: "update picture!"
-      update: "update my account!"
-      success: "updated successfuly"
-      fail: "update failed! please try again"
+      success: "Updated successfuly"
+      fail: "Update failed! Please try again"
       login: "Please log in"
-      delete: "account deleted!"
-      delete_fail: "WARNING! failed to delete"
-      delete_confirm: "are you sure?"
-
 
   sessions:
+    new:
+      remember_me: "Remember me on this computer"
+      login_title: "Log In"
+      heading: "Log In"
+      login: "Log In"
+      btn_signup: "Haven't got an account yet? "
+      signup_now: "Sign up now!"
     create:
-      Invalid_email : "invalid email/password"
+      invalid_email: "Invalid email/password"
+      create_alert: "Account not activated. Check your email for the activation link."
+
+  user_mailer:
+    account_activation:
+      mail_active: "Account activation."
+      activate_link: "Activate"
+      heading: "Course Registration System"
+      hello: "Hi"
+      introduce: "Welcome to the University Unknown Course Registration System! Click on the link below to activate your account: "
+    edit:
+      active_success: "Account activated!"
+      active_fail: "Invalid activation link"

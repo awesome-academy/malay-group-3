@@ -1,4 +1,5 @@
 links:
+  manual_form_description: "#"
   gravatar: "https://secure.gravatar.com/avatar/"
   gravatar_email: "http://gravatar.com/emails"
 
@@ -10,3 +11,7 @@ validations:
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   password:
     min_length: 6
+
+gravartar:
+  size_default: 80
+  size_list: 50

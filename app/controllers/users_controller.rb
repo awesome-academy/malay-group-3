@@ -16,9 +16,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".success_mess_create"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".info_mail"
+      redirect_to root_path
     else
       flash.now[:danger] = t ".fail_mess_create"
       render :new
@@ -32,18 +32,18 @@ class UsersController < ApplicationController
   def update
     if @user.update user_params
       redirect_to @user
-      flash[:success] =  t "users.update.success"
+      flash[:success] =  t ".success"
     else
-      flash.now[:danger] = t "users.update.fail"
+      flash.now[:danger] = t ".fail"
       render :edit
     end
   end
 
   def destroy
     if @user.destroy
-     flash[:success] =  t "users.update.delete"
+     flash[:success] =  t ".success"
    else
-     flash[:warning] = t "users.update.delete_fail"
+     flash[:warning] = t ".fail"
    end
    redirect_to users_path
  end
