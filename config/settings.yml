@@ -15,3 +15,6 @@ validations:
 gravartar:
   size_default: 80
   size_list: 50
+
+password_reset:
+  expired_time: 2
