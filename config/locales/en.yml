@@ -81,6 +81,7 @@ en:
       login: "Log In"
       btn_signup: "Haven't got an account yet? "
       signup_now: "Sign up now!"
+      forgot_pass: "(forgot password)"
     create:
       invalid_email: "Invalid email/password"
       create_alert: "Account not activated. Check your email for the activation link."
@@ -95,3 +96,29 @@ en:
     edit:
       active_success: "Account activated!"
       active_fail: "Invalid activation link"
+    password_reset:
+      mail_reset_pass: "Password reset"
+      heading: "Password reset"
+      reset_title: "To reset your password click the link below: "
+      reset_expire: "This link will expire in two hours."
+      reset_remind: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      reset_link: "Reset Password"
+
+  password_resets:
+    new:
+      fail_mess_create: "Password reset fail."
+      forget_create: "Submit"
+      forgot_title: "Forgot Password"
+      heading: "Forgot Password"
+    create:
+      info_mail: "Email sent with password reset instructions."
+      fail_create: "Email address not found!!!"
+    edit:
+      heading: "Reset Password"
+      reset_title: "Reset Password"
+      confirmation: "Confirmation"
+      reset_submit: "Update password"
+    update:
+      success_update: "Password has been reset."
+      fail_expired: "Password reset has expired."
+      fail_create: "Password reset fail."
