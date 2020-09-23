@@ -1,0 +1,15 @@
+<li>
+  <%= course.name %>
+  
+  <p>
+    <strong>status:</strong>
+    <%= course.status %>
+  </p>
+
+  <%= link_to "view course detail", course %> 
+
+  <% if current_user.admin? %>
+    <%= link_to "| update the course", edit_course_path(course) %> |
+    <%= link_to "delete course", course, method: :delete,data: { confirm: "You sure?" } %>
+  <% end %>
+</li>

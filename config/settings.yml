@@ -11,10 +11,13 @@ validations:
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   password:
     min_length: 6
+  course:
+    course_name_max_length: 60
 
 gravartar:
   size_default: 80
   size_list: 50
 
 password_reset:
-  expired_time: 2
+  expired_time: 1
+

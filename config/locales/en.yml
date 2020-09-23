@@ -100,7 +100,7 @@ en:
       mail_reset_pass: "Password reset"
       heading: "Password reset"
       reset_title: "To reset your password click the link below: "
-      reset_expire: "This link will expire in two hours."
+      reset_expire: "This link will expire in one hour."
       reset_remind: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
       reset_link: "Reset Password"
 
@@ -122,3 +122,18 @@ en:
       success_update: "Password has been reset."
       fail_expired: "Password reset has expired."
       fail_create: "Password reset fail."
+
+  courses:
+    course_not_found: "course not found"
+    new:
+      new_course: "New Course"
+      create_new_course: "Create New course"
+    create:
+      course_created: "course created"
+      course_not_created: "course cannot be created"
+    update:
+      course_updated: "course updated"
+      course_cannot_be_updated: "course cannot be updated"
+    destroy:
+      course_not_deleted: you cant delete the started or finished course
+      course_deleted: course deleted sucessfully
