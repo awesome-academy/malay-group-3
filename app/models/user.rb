@@ -3,6 +3,8 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
 
+  has_many :reviews, dependent: :destroy
+
   USERS_PARAMS = %i(name email password password_confirmation).freeze
 
   scope :sort_by_name, ->{order :name}
