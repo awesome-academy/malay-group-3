@@ -29,9 +29,15 @@
   <strong>duration of course:</strong>
   <%= @course.total_month %>
 </p>
+  
+<%= link_to "add review", new_course_review_path(@course) %>|
 
 <% if current_user.admin? %>
   <%= link_to "update the course", edit_course_path %> |
 <% end %>
 
 <%= link_to "view other course", courses_path %>
+
+<p><%= "COURSE REVIEW" %></p>
+
+<%= render @course.reviews %>

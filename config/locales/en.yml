@@ -137,3 +137,15 @@ en:
     destroy:
       course_not_deleted: you cant delete the started or finished course
       course_deleted: course deleted sucessfully
+
+  reviews:
+    review_not_found: "review not found"
+    create:
+      review_created: "review created"
+      review_not_created: "review cannot be created"
+    update:
+      review_updated: "review is updated"
+      review_not_updated: "review cannot be updated"
+    destroy:
+      review_deleted: "review is deleted"
+      review_not_deleted: "review cannot be deleted"
