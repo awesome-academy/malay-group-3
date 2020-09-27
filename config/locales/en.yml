@@ -8,8 +8,8 @@ en:
       logo: "Course Registration"
       help_head: "Help"
       home_head: "Home"
-      login_head: "Log In"
-      logout_head: "Log Out"
+      login_head: "Login"
+      logout_head: "LogOut"
       users_head: "Users"
       account: "Account"
       profile_head: "Profile"
@@ -137,6 +137,30 @@ en:
     destroy:
       course_not_deleted: you cant delete the started or finished course
       course_deleted: course deleted sucessfully
+    course:
+      update: "Update the course"
+      heading: "status: "
+      delete: "Delete Course"
+      view: "View Course Detail"
+    edit:
+      heading: "Update the Course"
+      edit_title: "Update the Course"
+      update: "Updating the Course"
+    index:
+      index_title: "All courses"
+      heading: "All courses"
+      create: "Create New Course"
+    show:
+      status: "Status: "
+      start: "Starting date: "
+      member: "Member: "
+      des: "Description: "
+      duration: "Duration: "
+      month: " monthes"
+      update: "Update Course"
+      return: "Return"
+      review: "COURSE REVIEW"
+      add: "Create Review"
 
   reviews:
     review_not_found: "review not found"
@@ -149,3 +173,14 @@ en:
     destroy:
       review_deleted: "review is deleted"
       review_not_deleted: "review cannot be deleted"
+    review:
+      edit: "Edit the Review"
+      delete: "Delete the Review"
+    edit:
+      edit_title: "Edit Review"
+      edit: "Edit Review"
+      heading: "Edit Your Review"
+    new:
+      create_title: "New Review"
+      create: "Create New Review"
+      heading: "Create New Review"

@@ -1,8 +1,8 @@
-<% provide :title, "All courses" %>
+<% provide :title, t(".index_title") %>
 
-<h1>All courses </h1>
+<h1><%= t ".heading" %></h1>
 
-<%= paginate @course %> 
+<%= paginate @course %>
 
 <ul class="courses">
   <%= render @course %>
@@ -11,5 +11,5 @@
 <%= paginate @course %>
 
 <% if current_user.admin? %>
-  <%= link_to "Create New Course", new_course_url %>
+  <%= link_to t(".create"), new_course_url, class: "btn btn-primary btn-lg btn-block" %>
 <% end %>

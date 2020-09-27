@@ -1,15 +1,18 @@
 <li>
-  <%= course.name %>
+
+  <h3 style = "text-transform:capitalize;">
+    <b><%= course.name %></b>
+  </h3>
   
-  <p>
-    <strong>status:</strong>
+  <p style = "text-transform:capitalize;">
+    <b><%= t ".heading" %></b>
     <%= course.status %>
   </p>
 
-  <%= link_to "view course detail", course %> 
+  <%= link_to t(".view"), course, class: "btn btn-primary btn-sm" %> | 
 
   <% if current_user.admin? %>
-    <%= link_to "| update the course", edit_course_path(course) %> |
-    <%= link_to "delete course", course, method: :delete,data: { confirm: "You sure?" } %>
+    <%= link_to t(".update"), edit_course_path(course), class: "btn btn-primary btn-sm" %> |
+    <%= link_to t(".delete"), course, method: :delete,data: { confirm: " Are You Sure?" }, class: "btn btn-danger btn-sm" %> <br> <br>
   <% end %>
 </li>
