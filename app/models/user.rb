@@ -4,6 +4,8 @@ class User < ApplicationRecord
   before_create :create_activation_digest
 
   has_many :reviews, dependent: :destroy
+  has_many :registers, dependent: :destroy
+  
 
   USERS_PARAMS = %i(name email password password_confirmation).freeze
 
@@ -81,5 +83,4 @@ class User < ApplicationRecord
     self.activation_token = User.new_token
     self.activation_digest = User.digest(activation_token)
   end
-
 end

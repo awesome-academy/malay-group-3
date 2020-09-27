@@ -9,3 +9,29 @@
   	</section>
   </aside>
 </div>
+
+<% if current_user.admin? && current_user.id == @user.id %>
+  <%= "Manage other user's course" %>
+  <%= render Register.pending %>
+
+  <%= "check your course" %>
+  <p><%= "PENDING REGISTRATION" %></p>
+  <li> <%= render @user.registers.pending %></li>
+
+  <p><%= "SUCCESSFULL REGISTRATION" %></p>
+  <li><%= render @user.registers.approved %></li>
+
+  <p><%= "FAILED REGISTRATION" %></p>
+  <li><%= render @user.registers.rejected %></li>
+ 
+<% else %>
+  <p><%= "PENDING REGISTRATION" %></p>
+  <li> <%= render @user.registers.pending %></li>
+
+  <p><%= "SUCCESSFULL REGISTRATION" %></p>
+  <li><%= render @user.registers.approved %></li>
+
+  <p><%= "FAILED REGISTRATION" %></p>
+  <li><%= render @user.registers.rejected %></li>
+
+<% end %>
