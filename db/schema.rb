@@ -54,12 +54,6 @@ ActiveRecord::Schema.define(version: 2020_09_26_062156) do
     t.integer "member"
   end
 
-  create_table "register_statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "staus"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "registers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "status"
     t.bigint "user_id", null: false
