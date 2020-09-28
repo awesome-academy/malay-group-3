@@ -149,3 +149,15 @@ en:
     destroy:
       review_deleted: "review is deleted"
       review_not_deleted: "review cannot be deleted"
+
+  registers:
+    register_not_found: "registration not found!"
+    create:
+      register_created: "Registration complete!"
+      register_fail: "Registration failed. please try again"
+    destroy:
+      register_deleted: "register is cancelled"
+      register_not_deleted: "ERROR! register not deleted"
+    update:
+      status_update: "status updated"
+      status_not_update: "status not updated!"

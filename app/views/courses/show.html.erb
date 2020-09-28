@@ -30,6 +30,7 @@
   <%= @course.total_month %>
 </p>
   
+<%= link_to "Register this course", new_course_register_path(@course) %> |
 <%= link_to "add review", new_course_review_path(@course) %>|
 
 <% if current_user.admin? %>
@@ -41,3 +42,8 @@
 <p><%= "COURSE REVIEW" %></p>
 
 <%= render @course.reviews %>
+
+<% if current_user.admin? %>
+  <p><%= "REGISTERED STUDENTS (PENDING)" %></p>
+  <%= render @course.registers.pending %>
+<% end %>
