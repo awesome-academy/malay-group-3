@@ -1,18 +1,18 @@
 <div class="row">
   <aside class="col-md-4">
-  	<section class="user_info">
-  	  <h1>
-  	    <%= gravatar_for register.user, size: 50 %>
-  	    <% if current_user.admin? %>
-  	      <p><%= link_to register.course.name, register.user %></p>
-  		    <%= link_to register.user.name, register.user %>
-  		  <% else %> 
-  		    <%= link_to register.course.name, register.course %>
-  		  <% end %>
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for register.user, size: 50 %>
         <% if current_user.admin? %>
-    	    <%= link_to " | update registration status", edit_course_register_path(register.course,register) %>
-  		  <% end %>
-  	  </h1>
-  	</section>
+          <p><%= link_to register.course.name, register.user %></p>
+              <%= link_to register.user.name, register.user %><br>
+            <% else %> 
+              <%= link_to register.course.name, register.course %>
+            <% end %>
+        <% if current_user.admin? %>
+          <%= link_to t(".update"), edit_course_register_path(register.course,register), class: "btn btn-success btn-sm" %>
+        <% end %>
+      </h1>
+    </section>
   </aside>
 </div>
