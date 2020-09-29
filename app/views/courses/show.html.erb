@@ -18,7 +18,7 @@
             <%= @course.started_at %><br><br>
 
             <b><%= t ".member" %></b>
-            <%= @course.member %><br><br>
+            <%= @course.registers.approved.size %><br><br>
 
             <b><%= t ".des" %></b>
             <%= @course.description %>
@@ -54,7 +54,7 @@
   <%= render @course.reviews %>
 
   <% if current_user.admin? %>
-    <p><%= t ".pending" %></p>
-    <%= render @course.registers.pending %>
+    <strong><p><%= t ".approveded" %></p></strong>
+    <%= render @course.registers.approved %>
   <% end %>
 </div>

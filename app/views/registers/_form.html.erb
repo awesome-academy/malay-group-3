@@ -1,9 +1,7 @@
 <%= form_for [@course, @course.registers.build] do |f| %>
   <%= render "shared/error_messages", object: f.object %>
-  <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control" %>
-  <%= f.label :email %>
-  <%= f.email_field :email, class: "form-control" %>
-  
+  <%= f.label :tel, "telephone number" %>
+  <%= f.text_field :tel, class: "form-control" %>
+ 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

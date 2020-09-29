@@ -161,7 +161,7 @@ en:
       return: "Return"
       review: "COURSE REVIEW"
       add: "Create Review"
-      pending: "REGISTERED STUDENTS (PENDING)"
+      approveded: "STUDENTS of COURSE"
       register: "Register this Course"
 
   reviews:
