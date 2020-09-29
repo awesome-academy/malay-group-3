@@ -6,6 +6,6 @@
 <p> <%= review.content %> </p>
 
 <% if current_user.id==review.user.id || current_user.admin?  %>
-  <%= link_to "edit the review", edit_course_review_path(review.course,review) %> |
-  <%= link_to "delete the review", course_review_path(review.course, review) , method: :delete,data: { confirm: "You sure?" } %>
+  <%= link_to t(".edit"), edit_course_review_path(review.course,review), class: "btn btn-secondary btn-sm" %> |
+  <%= link_to t(".delete"), course_review_path(review.course, review) , method: :delete,data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
 <% end %>
