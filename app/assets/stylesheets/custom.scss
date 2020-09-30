@@ -53,6 +53,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -64,8 +65,20 @@ h2 {
   color: $gray-light;
 }
 
-p {
+h3 {
+  font-size: 1.8em;
+  line-height: 1.7em;
+  font-family: sans-serif;
+}
+
+h4 {
   font-size: 1.1em;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+p {
+  font-size: 1.4em;
   line-height: 1.7em;
 }
 

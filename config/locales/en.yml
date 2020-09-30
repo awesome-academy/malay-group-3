@@ -8,14 +8,14 @@ en:
       logo: "Course Registration"
       help_head: "Help"
       home_head: "Home"
-      login_head: "Log In"
-      logout_head: "Log Out"
+      login_head: "Login"
+      logout_head: "LogOut"
       users_head: "Users"
       account: "Account"
       profile_head: "Profile"
       setting_head: "Settings"
     footer:
-      description_1: "Copyright ©2020 University Unknown- All Right Reserved"
+      description_1: "Copyright ©2020 Sun Institute of Technology- All Right Reserved"
       info_foot: "For further information, please click "
 
   further_info_message: "here"
@@ -137,6 +137,32 @@ en:
     destroy:
       course_not_deleted: you cant delete the started or finished course
       course_deleted: course deleted sucessfully
+    course:
+      update: "Update the course"
+      heading: "status: "
+      delete: "Delete Course"
+      view: "View Course Detail"
+    edit:
+      heading: "Update the Course"
+      edit_title: "Update the Course"
+      update: "Updating the Course"
+    index:
+      index_title: "All courses"
+      heading: "All courses"
+      create: "Create New Course"
+    show:
+      status: "Status: "
+      start: "Starting date: "
+      member: "Member: "
+      des: "Description: "
+      duration: "Duration: "
+      month: " monthes"
+      update: "Update Course"
+      return: "Return"
+      review: "COURSE REVIEW"
+      add: "Create Review"
+      approveded: "STUDENTS of COURSE"
+      register: "Register this Course"
 
   reviews:
     review_not_found: "review not found"
@@ -149,9 +175,21 @@ en:
     destroy:
       review_deleted: "review is deleted"
       review_not_deleted: "review cannot be deleted"
+    review:
+      edit: "Edit the Review"
+      delete: "Delete the Review"
+    edit:
+      edit_title: "Edit Review"
+      edit: "Edit Review"
+      heading: "Edit Your Review"
+    new:
+      create_title: "New Review"
+      create: "Create New Review"
+      heading: "Create New Review"
 
   registers:
     register_not_found: "registration not found!"
+    heading: " | update registration status"
     create:
       register_created: "Registration complete!"
       register_fail: "Registration failed. please try again"
@@ -161,3 +199,13 @@ en:
     update:
       status_update: "status updated"
       status_not_update: "status not updated!"
+    edit:
+      status: "Registration Status"
+      button: "update status"
+      heading: "Update Registration Status"
+    new:
+      title: "registration details"
+      button: "register now!"
+      heading: "STUDENT DETAILS"
+    register:
+      update: "Update registration status"

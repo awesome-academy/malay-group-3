@@ -1,8 +1,6 @@
 class RegistersController < ApplicationController
   before_action :set_course
   before_action :set_register, only: %i(edit update)
-  before_action :load_user, only: %i(new edit update)
-
 
   def new
     @register = Register.new
@@ -42,14 +40,7 @@ class RegistersController < ApplicationController
   end
 
   def register_params
-    params.require(:register).permit :name, :email, :status  
-  end
-
-  def load_user
-    @user = User.find_by id: params[:user_id] 
-
-    flash[:warning] = t "users.user_not_found"
-    redirect_to root_path
+    params.require(:register).permit :tel, :email, :status  
   end
 
   def set_register

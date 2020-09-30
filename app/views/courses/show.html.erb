@@ -1,49 +1,60 @@
 <% provide :title, @course.name %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.name %>
-</p>
+<div>
+  <div>
+    <h1>
+      <b>Course Name:</b>
+      <%= @course.name %>
+    </h1>
 
-<p>
-  <strong>status:</strong>
-  <%= @course.status %>
-</p>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>
+            <b><%= t ".status" %></b>
+            <%= @course.status %><br><br>
 
-<p>
-  <strong>description:</strong>
-  <%= @course.description %>
-</p>
+            <b><%= t ".start" %></b>
+            <%= @course.started_at %><br><br>
 
-<p>
-  <strong>starting date:</strong>
-  <%= @course.started_at %>
-</p>
+            <b><%= t ".member" %></b>
+            <%= @course.registers.approved.size %><br><br>
 
-<p>
-  <strong>member:</strong>
-  <%= @course.member %>
-</p>
+            <b><%= t ".des" %></b>
+            <%= @course.description %>
+          </h4>
+        </div>
 
-<p>
-  <strong>duration of course:</strong>
-  <%= @course.total_month %>
-</p>
+        <div class="col-md-6">
+          <h4>
+            <b><%= t ".duration" %></b>
+            <%= @course.total_month %><%= t ".month" %>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
   
-<%= link_to "Register this course", new_course_register_path(@course) %> |
-<%= link_to "add review", new_course_review_path(@course) %>|
+  <div style="padding-left: 59em;">
+    <%= link_to t(".register"), new_course_register_path(@course), class: "btn btn-primary btn-sm" %> |
 
-<% if current_user.admin? %>
-  <%= link_to "update the course", edit_course_path %> |
-<% end %>
+    <%= link_to t(".return"), courses_path, class: "btn btn-primary btn-sm" %> |
 
-<%= link_to "view other course", courses_path %>
+    <% if current_user.admin? %>
+      <%= link_to t(".update"), edit_course_path, class: "btn btn-primary btn-sm" %><br><br></p>
+    <% end %>
 
-<p><%= "COURSE REVIEW" %></p>
+  </div>
 
-<%= render @course.reviews %>
+  <h4>
+    <b><%= t ".review" %></b>
+    <%= link_to t(".add"), new_course_review_path(@course), class: "btn btn-success btn-sm" %><br><br>
+  </h4>
 
-<% if current_user.admin? %>
-  <p><%= "REGISTERED STUDENTS (PENDING)" %></p>
-  <%= render @course.registers.pending %>
-<% end %>
+  <%= render @course.reviews %>
+
+  <% if current_user.admin? %>
+    <strong><p><%= t ".approveded" %></p></strong>
+    <%= render @course.registers.approved %>
+  <% end %>
+</div>
