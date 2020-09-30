@@ -40,7 +40,7 @@ class RegistersController < ApplicationController
   end
 
   def register_params
-    params.require(:register).permit :name, :email, :status  
+    params.require(:register).permit :tel, :email, :status  
   end
 
   def set_register

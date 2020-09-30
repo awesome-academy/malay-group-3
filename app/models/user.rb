@@ -5,7 +5,13 @@ class User < ApplicationRecord
 
   has_many :reviews, dependent: :destroy
   has_many :registers, dependent: :destroy
-  
+
+  enum role: { user: 0, admin: 1 }
+
+  after_initialize do
+    self.role ||= :user if self.new_record?
+  end
+
 
   USERS_PARAMS = %i(name email password password_confirmation).freeze
 

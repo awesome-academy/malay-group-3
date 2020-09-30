@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_062156) do
+ActiveRecord::Schema.define(version: 2020_09_29_063431) do
 
   create_table "action_text_rich_texts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_062156) do
     t.integer "course_id"
     t.string "name"
     t.string "email"
+    t.string "tel"
     t.index ["user_id"], name: "index_registers_on_user_id"
   end
 
@@ -86,6 +87,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_062156) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
