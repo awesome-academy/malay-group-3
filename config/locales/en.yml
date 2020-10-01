@@ -163,6 +163,7 @@ en:
       add: "Create Review"
       approveded: "STUDENTS of COURSE"
       register: "Register this Course"
+      student: " places"
 
   reviews:
     review_not_found: "review not found"
