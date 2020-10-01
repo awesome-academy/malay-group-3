@@ -18,7 +18,7 @@
             <%= @course.started_at %><br><br>
 
             <b><%= t ".member" %></b>
-            <%= @course.registers.approved.size %><br><br>
+            <%= @course.member %><%= t ".student" %><br><br>
 
             <b><%= t ".des" %></b>
             <%= @course.description %>
@@ -28,33 +28,40 @@
         <div class="col-md-6">
           <h4>
             <b><%= t ".duration" %></b>
-            <%= @course.total_month %><%= t ".month" %>
+            <%= @course.total_month %><%= t ".month" %><br><br>
+
+            <b><%= t ".approved" %></b>
+            <%= @course.registers.approved.size %>
           </h4>
         </div>
       </div>
     </div>
   </div>
   
-  <div style="padding-left: 59em;">
-    <%= link_to t(".register"), new_course_register_path(@course), class: "btn btn-primary btn-sm" %> |
-
-    <%= link_to t(".return"), courses_path, class: "btn btn-primary btn-sm" %> |
-
-    <% if current_user.admin? %>
-      <%= link_to t(".update"), edit_course_path, class: "btn btn-primary btn-sm" %><br><br></p>
+  <div class="right">
+    <% if current_user.registers.find_by(course_id: @course.id).present? || @course.finished? %>
+      <% "you can no longer register this course" %>    
+    <% else %>
+      <%= link_to t(".register"), new_course_register_path(@course), class: "btn btn-primary btn-sm" %> | 
     <% end %>
 
+    <%= link_to t(".return"), courses_path, class: "btn btn-primary btn-sm" %>
+
+    <% if current_user.admin? %>
+       | <%= link_to t(".update"), edit_course_path, class: "btn btn-primary btn-sm" %><br><br></p>
+    <% end %>
   </div>
 
-  <h4>
-    <b><%= t ".review" %></b>
+  <h5>
+    <br><br><b><%= t ".review" %></b>
     <%= link_to t(".add"), new_course_review_path(@course), class: "btn btn-success btn-sm" %><br><br>
-  </h4>
+  </h5>
 
-  <%= render @course.reviews %>
+  <%= render @course.reviews %><br>
+  
 
   <% if current_user.admin? %>
-    <strong><p><%= t ".approveded" %></p></strong>
+    <strong><p><br><br><%= t ".approveded" %></p></strong>
     <%= render @course.registers.approved %>
   <% end %>
 </div>

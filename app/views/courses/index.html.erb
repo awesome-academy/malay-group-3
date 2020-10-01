@@ -10,6 +10,8 @@
 
 <%= paginate @course %>
 
-<% if current_user.admin? %>
-  <%= link_to t(".create"), new_course_url, class: "btn btn-primary btn-lg btn-block" %>
-<% end %>
+<div>
+  <% if current_user.admin? %>
+	  <%= link_to t(".create"), new_course_url, class: "btn btn-primary btn-lg btn-block" %>
+	<% end %>
+</div>

@@ -1,17 +1,19 @@
-<li>
-  <h3 style = "text-transform:capitalize;">
+<div class="reviewsbox">
+  <h3 class="capital">
     <b><%= course.name %></b>
   </h3>
 
-  <p style = "text-transform:capitalize;">
+  <p class="capital">
     <b><%= t ".heading" %></b>
     <%= course.status %>
   </p>
 
-  <%= link_to t(".view"), course, class: "btn btn-primary btn-sm" %>
+  <div class="right">
+    <%= link_to t(".view"), course, class: "btn btn-primary btn-sm" %>
 
-  <% if current_user.admin? %>
-     | <%= link_to t(".update"), edit_course_path(course), class: "btn btn-primary btn-sm" %> |
-    <%= link_to t(".delete"), course, method: :delete,data: { confirm: " Are You Sure?" }, class: "btn btn-danger btn-sm" %> <br> <br>
-  <% end %>
-</li>
+    <% if current_user.admin? %>
+       | <%= link_to t(".update"), edit_course_path(course), class: "btn btn-primary btn-sm" %> |
+      <%= link_to t(".delete"), course, method: :delete,data: { confirm: " Are You Sure?" }, class: "btn btn-danger btn-sm" %> <br> <br>
+    <% end %>
+  </div>
+</div>
