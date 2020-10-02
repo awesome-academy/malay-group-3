@@ -4,7 +4,7 @@
       <h1>
         <%= gravatar_for register.user, size: 50 %>
         <% if current_user.admin? %>
-          <p><%= link_to register.course.name, register.user %></p>
+          <p><%= link_to register.course.name, register.course %></p>
               <%= link_to register.user.name, register.user %><br>
             <% else %> 
               <%= link_to register.course.name, register.course %>

@@ -77,6 +77,10 @@ h4 {
   text-align: left;
 }
 
+h5 {
+  font-size: 1.4em;
+}
+
 p {
   font-size: 1.4em;
   line-height: 1.7em;
@@ -219,4 +223,19 @@ input {
   padding: 10px 0;
   border-bottom: 1px solid $gray-lighter;
   }
+}
+
+/* Courses */
+.reviewsbox {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.right {
+  float: right;
+}
+
+.capital {
+  text-transform:capitalize;
 }
