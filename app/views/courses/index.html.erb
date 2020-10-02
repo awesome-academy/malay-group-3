@@ -1,15 +1,27 @@
 <% provide :title, t(".index_title") %>
 
+<%= form_tag "", url: courses_path, role: "search", method: :get do %>
+  <div class="navbar-form navbar-right">
+    <div class="input-group">  
+      <%= search_field_tag :search, params[:search], placeholder: "Search course", class: "form-control" %>  
+      <div class="input-group-btn">  
+        <%= button_tag "", :class => "btn btn-info glyphicon glyphicon-search",:name => nil%>
+      </div>
+    </div>  
+  </div>  
+<% end %>
+
 <h1><%= t ".heading" %></h1>
 
-<%= paginate @course %>
+<% if @courses.any? %>
+  <%= paginate @courses %>
 
-<ul class="courses">
-  <%= render @course %>
-</ul>
+  <ul class="courses">
+    <%= render @courses %>
+  </ul>
 
-<%= paginate @course %>
-
+  <%= paginate @courses %>
+<% end %>
 <div>
   <% if current_user.admin? %>
 	  <%= link_to t(".create"), new_course_url, class: "btn btn-primary btn-lg btn-block" %>
