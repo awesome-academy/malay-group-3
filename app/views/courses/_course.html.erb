@@ -1,19 +1,22 @@
-<div class="reviewsbox">
-  <h3 class="capital">
-    <b><%= course.name %></b>
-  </h3>
+<div class="grid-container">
+  <div class="style">  
+    <div class="c">
+      <h3 class="capital">
+        <b><%= link_to course.name, course %></b>
+      </h3>
 
-  <p class="capital">
-    <b><%= t ".heading" %></b>
-    <%= course.status %>
-  </p>
-
-  <div class="right">
-    <%= link_to t(".view"), course, class: "btn btn-primary btn-sm" %>
+      <div class="capital">
+        <b><%= t ".heading" %></b>
+        <%= course.status %>
+      </div>
+    </div>
+  
+    <div class="r">
+      <br><%= link_to t(".view"), course, class: "btn btn-primary btn-sm" %>
 
     <% if current_user.admin? %>
-       | <%= link_to t(".update"), edit_course_path(course), class: "btn btn-primary btn-sm" %> |
-      <%= link_to t(".delete"), course, method: :delete,data: { confirm: " Are You Sure?" }, class: "btn btn-danger btn-sm" %> <br> <br>
-    <% end %>
+         | <%= link_to t(".delete"), course, method: :delete,data: { confirm: " Are You Sure?" }, class: "btn btn-danger btn-sm" %>   <br><br>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -21,6 +21,7 @@
 /* universal */
 body {
   padding-top: 60px;
+  background-color: $light-green;
 }
 
 section {
@@ -75,6 +76,7 @@ h4 {
   font-size: 1.1em;
   margin-bottom: 1px;
   text-align: left;
+  line-height: 1.5em;
 }
 
 h5 {
@@ -83,7 +85,7 @@ h5 {
 
 p {
   font-size: 1.4em;
-  line-height: 1.7em;
+  line-height: 0.8em;
 }
 
 /* header */
@@ -107,7 +109,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 1px solid $cobalt-blue;
   color: $gray-light;
   a {
     color: $gray;
@@ -123,12 +125,12 @@ footer {
   ul {
     float: right;
     list-style: none;
-  li {
-    float: left;
-    margin-left: 15px;
-    }
-  }
+    margin-right: 15px;
 }
+
+/* remove rounding from cards, buttons and inputs */
+
+.card, .btn, .form-control { }
 
 /* sidebar */
 aside {
@@ -229,7 +231,30 @@ input {
 .reviewsbox {
   overflow: auto;
   padding: 10px 0;
-  border-bottom: 1px solid $gray-lighter;
+  border-bottom: 1px solid $cobalt-blue;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 5px;
+  padding: 15px;
+
+  .style {
+    background-color: #F9B7FF;
+    padding: 1px 0;
+    border: 1px solid blue;
+    box-shadow: 5px 10px #888888;
+
+    .r {
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    }
+
+    .c {
+    margin-left: 20px
+    }
+  }
 }
 
 .right {
@@ -238,4 +263,18 @@ input {
 
 .capital {
   text-transform:capitalize;
+}
+
+.block {
+  background-color: #888888;
+}
+
+.coursedetail {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #F9B7FF;
+  padding-left: 40px;
+  border-radius: 30px;
 }
