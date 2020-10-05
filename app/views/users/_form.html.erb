@@ -8,5 +8,13 @@
   <%= f.password_field :password, class: "form-control" %>
   <%= f.label :password_confirmation, t("users.new.confirmation") %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <% if logged_in? %>
+    <% if current_user.admin? %>
+      <%= f.label :role %><br>
+      <%= f.select :role, User.roles.keys %>
+    <% end %>
+  <% end %>
+
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

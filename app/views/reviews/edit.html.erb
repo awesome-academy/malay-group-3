@@ -1,14 +1,17 @@
 <% provide :title, t(".edit_title") %>
 <% provide :button_text, t(".edit") %>
+
+<div class="row">
 <h1><%= t ".heading" %><h1>
 
-<div class="col-md-6 col-md-offset-3">
-  <%= form_for [@course, @review] do |f| %>
+  <div class="col-md-30 col-md-offset-30">
+    <%= form_for [@course, @review] do |f| %>
 
-    <%= render "shared/error_messages", object: f.object %>
-    <%= f.label :content %>
-    <%= f.text_field :content, class: "form-control" %>
+      <%= render "shared/error_messages", object: f.object %>
+        <%= f.label :content %>
+        <%= f.rich_text_area :content %>
 
-    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
-  <% end %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

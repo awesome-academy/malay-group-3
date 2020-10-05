@@ -15,7 +15,7 @@
             <%= @course.status %><br><br>
 
             <b><%= t ".start" %></b>
-            <%= @course.started_at %><br><br>
+            <%= @course.started_at.strftime("%B %d, %Y") %><br><br>
 
             <b><%= t ".member" %></b>
             <%= @course.member %><%= t ".student" %><br><br>

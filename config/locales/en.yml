@@ -93,6 +93,7 @@ en:
       heading: "Course Registration System"
       hello: "Hi"
       introduce: "Welcome to the University Unknown Course Registration System! Click on the link below to activate your account: "
+      description: " Please click the link below to activate your admin account,your password is 123456, please change your password upon activation."
     edit:
       active_success: "Account activated!"
       active_fail: "Invalid activation link"

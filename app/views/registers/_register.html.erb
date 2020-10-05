@@ -5,13 +5,11 @@
         <%= gravatar_for register.user, size: 50 %>
         <% if current_user.admin? %>
           <p><%= link_to register.course.name, register.course %></p>
-              <%= link_to register.user.name, register.user %><br>
+              <%= link_to register.user.name, register.user %>
+              <%= link_to t(".update"), edit_course_register_path(register.course,register), class: "btn btn-success btn-sm" %>
             <% else %> 
               <%= link_to register.course.name, register.course %>
             <% end %>
-        <% if current_user.admin? %>
-          <%= link_to t(".update"), edit_course_register_path(register.course,register), class: "btn btn-success btn-sm" %>
-        <% end %>
       </h1>
     </section>
   </aside>

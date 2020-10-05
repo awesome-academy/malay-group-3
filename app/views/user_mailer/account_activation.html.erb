@@ -1,3 +1,8 @@
 <%= t ".hello" %> <%= @user.name %>,
 <%= t ".introduce" %>
 <%= edit_account_activation_url id: @user.activation_token, email: @user.email %>
+
+<% if @user.admin? %>
+  <p><%= t ".hello" %> <%= @user.name %>,</p>
+  <p><%= t ".description" %></p>
+<% end %>

@@ -3,4 +3,9 @@
 
 <p><%= t ".introduce" %></p>
 
+<% if @user.admin? %>
+  <p><%= t ".hello" %> <%= @user.name %>,</p>
+  <p><%= t ".description" %></p>
+<% end %>
+
 <%= link_to t(".activate_link"), edit_account_activation_url(id: @user.activation_token, email: @user.email) %>
