@@ -7,7 +7,7 @@
       <%= @course.name %>
     </h1>
 
-    <div class="jumbotron">
+    <div class="coursedetail">
       <div class="row">
         <div class="col-md-6">
           <h4>
@@ -52,10 +52,10 @@
     <% end %>
   </div>
 
-  <h5>
+  <p>
     <br><br><b><%= t ".review" %></b>
-    <%= link_to t(".add"), new_course_review_path(@course), class: "btn btn-success btn-sm" %><br><br>
-  </h5>
+    <%= link_to t(".add"), new_course_review_path(@course), class: "btn btn-success btn-xs" %><br><br>
+  </p>
 
   <%= render @course.reviews %><br>
   
