@@ -2,7 +2,10 @@ class CoursesController < ApplicationController
   before_action :set_course, except: %i(index new create)
 
   def index
-    @course = Course.recent_courses.page params[:page]
+    @search_term = params[:search]
+    @courses = Course.search_by(@search_term)
+                    .recent_courses
+                    .page params[:page]
   end
 
   def new

@@ -6,6 +6,10 @@ class Course < ApplicationRecord
   
   scope :recent_courses, ->{order created_at: :desc}
 
+  scope :search_by, (lambda do |name|
+    where("name like ?", "%#{name}%") if name.present?
+  end)
+
   after_initialize do
     self.status ||= :opening if self.new_record?
   end
