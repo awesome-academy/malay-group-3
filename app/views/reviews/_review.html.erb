@@ -1,17 +1,24 @@
-<div class="reviewsbox">
-	<p>
-	  <%= gravatar_for review.user, size: 50 %>
-	  <%= link_to review.user.name, review.user %>
-	</p>
+<div class="reviewcontainer">
+	<div class="reviewsbox">
+    <p>
+      <%= gravatar_for review.user, size: 50 %>
+      <%= link_to review.user.name, review.user %>
+    </p>
 
-	<div style="font-size: 1.1em">
-		<%= review.content %>
-	</div>
+    <div class="word">
+      <%= review.content %>
+    </div>
 
-	<% if current_user.id==review.user.id || current_user.admin?  %>
-	  <div style="float:right;">
-	  	<%= link_to t(".edit"), edit_course_review_path(review.course,review), class: "btn btn-secondary btn-sm" %> |
-	    <%= link_to t(".delete"), course_review_path(review.course, review) , method: :delete,data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
-	  </div>
-	<% end %>
+    <span class="timestamp">
+      <%= t ".post" %><%= time_ago_in_words review.created_at %><%= t ".post2" %>
+
+    <div>
+      <% if current_user.id==review.user.id || current_user.admin?  %>
+        <div style="float:right;">
+          <%= link_to t(".edit"), edit_course_review_path(review.course,review), class: "btn btn-secondary btn-sm" %> |
+          <%= link_to t(".delete"), course_review_path(review.course, review) , method: :delete,data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
