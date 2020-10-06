@@ -9,4 +9,6 @@ class Register < ApplicationRecord
   after_initialize do
     self.status ||= :pending if self.new_record?
   end
+
+  validates :tel, presence: true
 end

@@ -13,7 +13,7 @@ class User < ApplicationRecord
   end
 
 
-  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  USERS_PARAMS = %i(name email password password_confirmation role).freeze
 
   scope :sort_by_name, ->{order :name}
 

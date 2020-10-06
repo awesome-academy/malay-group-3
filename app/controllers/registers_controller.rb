@@ -22,9 +22,9 @@ class RegistersController < ApplicationController
  def update
     if @register.update register_params
       redirect_to current_user
-      flash[:success] = "review_updated"
+      flash[:success] = t ".status_update"
     else
-      flash.now[:danger] = "review_not_updated"
+      flash.now[:danger] = t ".status_not_update"
       render :edit
     end
   end
