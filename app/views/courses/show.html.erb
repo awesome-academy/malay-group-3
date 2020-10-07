@@ -31,15 +31,20 @@
             <%= @course.total_month %><%= t ".month" %><br><br>
 
             <b><%= t ".approved" %></b>
-            <%= @course.registers.approved.size %>
+            <%= @course.registers.approved.size %><br><br>
           </h4>
         </div>
+      </div>
+
+      <div class="rgt">
+        <%= t ".updateTime" %>
+        <%= @course.updated_at.localtime.strftime "%Y-%m-%d %H:%M:%S" %>
       </div>
     </div>
   </div>
   
   <div class="right">
-    <% if current_user.registers.find_by(course_id: @course.id).present? || @course.finished? %>
+    <% if current_user.registers.find_by(course_id: @course.id).present? || @course.finished? || current_user.admin? %>
       <% "you can no longer register this course" %>    
     <% else %>
       <%= link_to t(".register"), new_course_register_path(@course), class: "btn btn-primary btn-sm" %> | 

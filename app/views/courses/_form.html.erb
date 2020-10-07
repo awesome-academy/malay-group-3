@@ -2,22 +2,22 @@
   <%= render "shared/error_messages", object: f.object %>
 
   <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control" %>
+  <%= f.text_field :name, class: "form-control", placeholder: "Ex: Tribology" %>
 
   <%= f.label :started_at %>
   <%= f.date_field :started_at, class: "form-control" %>
 
   <%= f.label :total_month %>
-  <%= f.number_field :total_month, class: "form-control" %>
+  <%= f.number_field :total_month, class: "form-control", placeholder: "Ex: 3/ 6/ 9" %>
 
   <%= f.label :member %>
-  <%= f.number_field :member, class: "form-control" %>
+  <%= f.number_field :member, class: "form-control", placeholder: "Ex: 10" %>
 
   <%= f.label :status %><br>
   <%= f.select :status, Course.statuses.keys %>
   
   <%= f.label :description %>
-    <%= f.rich_text_area :description %>
+    <%= f.rich_text_area :description, placeholder: "This course is about ..." %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

@@ -1,16 +1,24 @@
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-6">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for register.user, size: 50 %>
+      <h2>
         <% if current_user.admin? %>
-          <p><%= link_to register.course.name, register.course %></p>
-              <%= link_to register.user.name, register.user %>
-              <%= link_to t(".update"), edit_course_register_path(register.course,register), class: "btn btn-success btn-sm" %>
-            <% else %> 
-              <%= link_to register.course.name, register.course %>
-            <% end %>
-      </h1>
+          <%= gravatar_for register.user, size: 50 %>
+          <p><%= t ".course_name" %><%= link_to register.course.name, register.course %></p>
+          <%= t ".user_name" %><%= link_to register.user.name, register.user %>
+          <span class="timestamp">
+            <%= t ".register" %><%= register.created_at.localtime.strftime "%Y/%m/%d %H:%M:%S" %>
+          <rgt>
+            <%= link_to t(".update"), edit_course_register_path(register.course,register), class: "btn btn-success btn-sm" %>
+          </rgt>
+        <% else %> 
+          <p><%= t ".course_name" %><%= link_to register.course.name, register.course %></p>
+          <div style= "float: right;">
+            <span class="timestamp">
+            <i><%= t ".post" %><%= register.created_at.localtime.strftime "%Y/%m/%d %H:%M:%S" %></i>
+          </div>
+        <% end %>
+      </h2>
     </section>
   </aside>
 </div>

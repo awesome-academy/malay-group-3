@@ -31,24 +31,24 @@ en:
       help_title: "Help"
       heading: "Help"
       description_1: "Any problems or suggestion, please contact us at "
-      email: "Email: universityhelp@unknown.my"
+      email: "Email: Institutehelp@sun.my"
       contact: "Phone: 0129876543"
       faq: "Frequently Asked Question"
     info:
       info_title: "Information"
       heading: "Information"
       manual_form_description: "Manual Registration Form."
-      manual_description: "1. If you wish to make manual registration, please download this "
+      manual_description: "If you wish to make manual registration, please download this "
       manual_description2: "You are required to print out the form and pass to HEP office after fill in all information."
-      schedule: "2. Class Schedule"
-      description_3: "3. Course List"
+      schedule: "Class Schedule"
+      description_3: "Course List"
       
   users:
     user_not_found: "User not found"
     edit:
       edit_title: "Edit user"
       update: "Update my account!"
-      heading: "Update ypur profile"
+      heading: "Update your profile"
       gravatar: "Update picture!"
     index:
       index_title: "All Users"
@@ -72,6 +72,11 @@ en:
       success: "Updated successfuly"
       fail: "Update failed! Please try again"
       login: "Please log in"
+    show:
+      pending: "PENDING REGISTRATION"
+      success: "SUCCESSFULL REGISTRATION"
+      fail: "FAILED REGISTRATION"
+      manage: "Manage other user's course"
 
   sessions:
     new:
@@ -167,6 +172,7 @@ en:
       student: " places"
       unable: "you can no longer register this course"
       approved: "Number of registered studens: "
+      updateTime: "Latest updated at "
 
   reviews:
     review_not_found: "review not found"
@@ -182,6 +188,8 @@ en:
     review:
       edit: "Edit the Review"
       delete: "Delete the Review"
+      post: "Posted "
+      post2: " ago. "
     edit:
       edit_title: "Edit Review"
       edit: "Edit Review"
@@ -213,3 +221,7 @@ en:
       heading: "STUDENT DETAILS"
     register:
       update: "Update registration status"
+      course_name: "Course: "
+      user_name: "Name: "
+      post: "Updated at "
+      register: "Registered at "

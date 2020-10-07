@@ -1,10 +1,10 @@
 <%= provide :title, t(".info_title") %>
 <h1><%= t ".heading" %></h1>
 
-<p>
-<%= t ".manual_description" %>
-<%= link_to t(".manual_form_description"), Settings.links.manual_form_description %>
-<%= t ".manual_description2" %><br>
-<%= t ".schedule" %><br>
-<%= t ".description_3" %><br>
-</p>
+<h4>
+<li><%= t ".manual_description" %>
+<%= link_to t(".manual_form_description"), asset_path("Course-Registration-Form.pdf", skip_pipeline: true) %>
+<%= t ".manual_description2" %><br><br></li>
+<li><%= link_to t(".schedule"), Settings.links.schedule %><br><br></li>
+<li><%= t ".description_3" %><br><br></li>
+</h4>
